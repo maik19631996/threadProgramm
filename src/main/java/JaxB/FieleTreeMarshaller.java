@@ -5,9 +5,8 @@
  */
 package JaxB;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.InputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -18,18 +17,17 @@ import javax.xml.bind.Marshaller;
  */
 public class FieleTreeMarshaller {
 
-    public InputStream marshallTo(Datei rootDatei) throws JAXBException {
-        String returningXML = "";
-        JAXBContext jaxbContext = JAXBContext.newInstance(Datei.class);
+    public OutputStream marshallTo(Verzeichnis rootVerzeichnis) throws JAXBException {
+        
+        JAXBContext jaxbContext = JAXBContext.newInstance(Verzeichnis.class);
         javax.xml.bind.Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-        // output pretty printed
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        OutpuStream xmlStream = new ByteArrayOutpuStream(4096);
-        jaxbMarshaller.marshal(this, out);
-        jaxbMarshaller.marshal(rootDatei, xmlStream);
+        OutputStream xmlStream = new ByteArrayOutputStream();
+
+        jaxbMarshaller.marshal(rootVerzeichnis, xmlStream);
         
-        return returningXML
+        return xmlStream;
     }
 }

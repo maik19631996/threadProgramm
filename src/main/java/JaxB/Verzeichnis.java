@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Verzeichnis")
-@XmlType(propOrder = {"name","gorsse"})
+//@XmlType(propOrder = {"name","gorsse"})
 public class Verzeichnis extends Datei {
        
     @XmlElement(name = "verzeichis")

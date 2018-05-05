@@ -48,7 +48,7 @@ public class DateiTest {
         String result = instance.getName();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -61,7 +61,7 @@ public class DateiTest {
         Datei instance = new Datei();
         instance.setName(name);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  //      fail("The test case is a prototype.");
     }
 
     /**
@@ -75,7 +75,7 @@ public class DateiTest {
         String result = instance.getGrosse();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        fail("The test case is a prototype.");
     }
 
     /**
@@ -88,7 +88,7 @@ public class DateiTest {
         Datei instance = new Datei();
         instance.setGrosse(grosse);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  //      fail("The test case is a prototype.");
     }
     
 }
