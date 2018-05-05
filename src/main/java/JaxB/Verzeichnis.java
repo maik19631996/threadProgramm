@@ -6,6 +6,7 @@
 package JaxB;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;
 
@@ -17,27 +18,30 @@ import javax.xml.bind.annotation.*;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Verzeichnis")
 @XmlType(propOrder = {"name","gorsse"})
-public class Verzeichnis {
+public class Verzeichnis extends Datei {
+       
+    @XmlElement(name = "verzeichis")
+    protected ArrayList<Verzeichnis> subDirectoryList;
     
-    protected String name;   
-    protected String grosse;
-    
-    protected List<Datei> subDirectory;
+    @XmlElement(name = "datei")
+    protected ArrayList<Datei> subFileList;
 
-    public void setName(String name) {
-        this.name = name;
+    public ArrayList<Verzeichnis> getSubDirectoryList() {
+        return subDirectoryList;
     }
 
-    public void setGrosse(String grosse) {
-        this.grosse = grosse;
+    public void setSubDirectoryList(ArrayList<Verzeichnis> subDirectoryList) {
+        this.subDirectoryList = subDirectoryList;
     }
 
-    public String getName() {
-        return name;
+    public ArrayList<Datei> getSubFileList() {
+        return subFileList;
     }
 
-    public String getGrosse() {
-        return grosse;
+    public void setSubFileList(ArrayList<Datei> subFileList) {
+        this.subFileList = subFileList;
     }
+
+
             
 }
