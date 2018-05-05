@@ -12,6 +12,8 @@ package com.mycompany.treadproject;
 public class Client {
     private String _tag;
 
+    
+    
     public String getTag() {
         return _tag;
     }

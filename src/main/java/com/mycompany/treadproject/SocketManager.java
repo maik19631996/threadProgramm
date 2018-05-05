@@ -45,7 +45,7 @@ public class SocketManager {
     private void ThreadSocketListener(){
         try{
             
-            System.out.print("Waiting for Connections");
+            System.out.println("Waiting for Connections");
             ServerSocket serverSocket = new ServerSocket(_port);
             while(true){
                 
@@ -109,9 +109,8 @@ public class SocketManager {
             
             do{
                 bytes = stream.read(buffer, offset, buffer.length);
-                for(int i = 0; i < bytes; i++){
-                    content += buffer[i];
-                }
+                
+                content += new String(buffer, 0, bytes);
                 
             } while(bytes == buffer.length);
             

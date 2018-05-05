@@ -6,6 +6,7 @@
 package com.mycompany.treadproject;
 
 import java.io.DataOutputStream;
+import java.io.OutputStream;
 import java.net.Socket;
 
 /**
@@ -19,7 +20,7 @@ public class ClientSenderTest {
     
     public static void main(String[] args){
         
-        int port = 80;
+        int port = 1340;
         String host = "127.0.0.1";
         
         for(int i=0; i < args.length; i++){
@@ -36,7 +37,7 @@ public class ClientSenderTest {
         
         try{
             Socket s = new Socket(host, port);   
-            DataOutputStream stream = new DataOutputStream(s.getOutputStream());
+            OutputStream stream = s.getOutputStream();
             
             stream.write("this is a test".getBytes());
         } catch(Exception e){

@@ -11,7 +11,7 @@ package com.mycompany.treadproject;
  */
 public class Main_Test_SocketManager {
     public static void main(String[] args) {
-        SocketManager sm = new SocketManager(1338, 2);
+        SocketManager sm = new SocketManager(1340, 2);
         sm.StartListener();
     }
 }
