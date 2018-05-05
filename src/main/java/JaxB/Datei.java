@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "datei")
-@XmlType(propOrder = {"name", "gorsse"})
+@XmlType(propOrder = {"name", "groesse"})
 public class Datei {
 
     protected String name;
