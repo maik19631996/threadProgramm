@@ -9,15 +9,9 @@ package com.mycompany.treadproject;
  *
  * @author Alexander
  */
-public class Client {
-    private String _tag;
-
-    public String getTag() {
-        return _tag;
-    }
-    
-    
-    public Client(String tag){
-        _tag = tag;
+public class Main_Test_SocketManager {
+    public static void main(String[] args) {
+        SocketManager sm = new SocketManager(1338, 2);
+        sm.StartListener();
     }
 }
