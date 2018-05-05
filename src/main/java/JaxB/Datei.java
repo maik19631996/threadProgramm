@@ -7,6 +7,7 @@ package JaxB;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -19,7 +20,9 @@ import javax.xml.bind.annotation.XmlType;
 //@XmlType(propOrder = {"name", "groesse"})
 public class Datei {
 
+    @XmlAttribute
     protected String name;
+    @XmlAttribute
     protected String grosse;
 
     public String getName() {

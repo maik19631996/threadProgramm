@@ -7,11 +7,14 @@ package JaxB;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
@@ -48,6 +51,13 @@ public class FieleTreeMarshallerTest {
         Verzeichnis rootVerzeichnis = new Verzeichnis();
         rootVerzeichnis.grosse = "50MB";
         rootVerzeichnis.name = "myFirsttestFile";
+        ArrayList<Datei> datein = new ArrayList<Datei>();
+        Datei datei = new Datei();
+        datei.grosse = "50k";
+        datei.name = "cool File";
+        datein.add(datei);
+                
+        rootVerzeichnis.subFileList = datein;
         FieleTreeMarshaller instance = new FieleTreeMarshaller();
         OutputStream expResult = null;
         ByteArrayOutputStream result = (ByteArrayOutputStream) instance.marshallTo(rootVerzeichnis);
