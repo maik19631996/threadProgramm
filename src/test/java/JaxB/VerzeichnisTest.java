@@ -6,6 +6,7 @@
 package JaxB;
 
 import java.util.ArrayList;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -46,7 +47,7 @@ public class VerzeichnisTest {
         System.out.println("getSubDirectoryList");
         Verzeichnis instance = new Verzeichnis();
         ArrayList<Verzeichnis> expResult = null;
-        ArrayList<Verzeichnis> result = instance.getSubDirectoryList();
+        List<Verzeichnis> result = instance.getSubDirectoryList();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
  //      fail("The test case is a prototype.");
@@ -73,7 +74,7 @@ public class VerzeichnisTest {
         System.out.println("getSubFileList");
         Verzeichnis instance = new Verzeichnis();
         ArrayList<Datei> expResult = null;
-        ArrayList<Datei> result = instance.getSubFileList();
+        List<Datei> result = instance.getSubFileList();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
     //    fail("The test case is a prototype.");
