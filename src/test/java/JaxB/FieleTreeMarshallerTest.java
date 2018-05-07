@@ -56,6 +56,12 @@ public class FieleTreeMarshallerTest {
         datei.grosse = "50k";
         datei.name = "cool File";
         datein.add(datei);
+        ArrayList<Verzeichnis> verzeichnisse = new ArrayList<Verzeichnis>();
+        Verzeichnis subdir = new Verzeichnis();
+        subdir.grosse = "100k";
+        subdir.name = "subdirName";
+        verzeichnisse.add(subdir);
+        rootVerzeichnis.subDirectoryList = verzeichnisse;
                 
         rootVerzeichnis.subFileList = datein;
         FieleTreeMarshaller instance = new FieleTreeMarshaller();
