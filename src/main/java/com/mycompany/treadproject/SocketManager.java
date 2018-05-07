@@ -91,7 +91,9 @@ public class SocketManager {
             _clients.put(client.getTag(), client);
         }
         
-        //TODO: DO HERE CLIENT SHI*
+        //TODO: DO CLIENT SHI* HERE
+        
+        //TODO: CLOSE CONNECTION
     }
     
     private String ReadStream(Socket socket){
